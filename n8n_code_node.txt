@@ -1,0 +1,20 @@
+last node on n8n after AWS S3 Download File node.
+
+added this code node:
+
+const items = $input.all();
+
+const output = items.map(item => {
+  const bucket = 'andierni-images-112622707427';
+  const region = 'eu-central-1';
+  const key = item.json.Key;
+  
+  return {
+    json: {
+      ...item.json,
+      ImageUrl: `https://${bucket}.s3.${region}.amazonaws.com/${key}`
+    }
+  };
+});
+
+return output;

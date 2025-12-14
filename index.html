@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Beautiful Moments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📸 Image Gallery</h1>
+            <p class="subtitle">Your Beautiful Moments Collection</p>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="date-filter">Filter by Date:</label>
+                    <select id="date-filter" class="filter-select">
+                        <option value="all">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+                <div class="filter-group custom-date-range" id="custom-date-range" style="display: none;">
+                    <input type="date" id="date-from" class="date-input">
+                    <span>to</span>
+                    <input type="date" id="date-to" class="date-input">
+                    <button id="apply-date-filter" class="btn-filter">Apply</button>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-order">Sort:</label>
+                    <select id="sort-order" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+                <div class="view-toggle">
+                    <button id="grid-view" class="btn-view active" title="Grid View">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                    <button id="carousel-view" class="btn-view" title="Carousel View">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="15" rx="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="stats">
+                <span id="image-count">Loading images...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Loading your beautiful images...</p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-container" id="gallery-container">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Images will be inserted here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <section class="carousel-container" id="carousel-container" style="display: none;">
+        <div class="container">
+            <div class="carousel">
+                <button class="carousel-btn prev" id="carousel-prev">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-main">
+                    <img id="carousel-image" src="" alt="Carousel Image">
+                    <div class="carousel-info">
+                        <span id="carousel-date"></span>
+                        <span id="carousel-counter"></span>
+                    </div>
+                </div>
+                <button class="carousel-btn next" id="carousel-next">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-thumbnails" id="carousel-thumbnails">
+                <!-- Thumbnail navigation will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <button class="lightbox-nav prev" id="lightbox-prev">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="lightbox-nav next" id="lightbox-next">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            <div class="lightbox-image-container">
+                <img id="lightbox-image" src="" alt="Enlarged Image">
+            </div>
+            <div class="lightbox-info">
+                <p id="lightbox-date"></p>
+                <p id="lightbox-size"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

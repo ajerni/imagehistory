@@ -1,0 +1,23 @@
+[
+  {
+    "Key": "942e0471-243c-464a-a066-4f21230bd87c",
+    "LastModified": "2025-12-14T13:46:46.000Z",
+    "ETag": "\"3e79949045385a475eb88ecd7d9cd10c-1\"",
+    "ChecksumAlgorithm": "CRC64NVME",
+    "ChecksumType": "FULL_OBJECT",
+    "Size": "98571",
+    "StorageClass": "STANDARD",
+    "ImageUrl": "https://andierni-images-112622707427.s3.eu-central-1.amazonaws.com/942e0471-243c-464a-a066-4f21230bd87c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOSFODNN7EXAMPLE%2F20251214%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20251214T140000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=example1234567890abcdef"
+  },
+  {
+    "Key": "fc4a0b58-6a02-4188-9a4b-13a08946096c",
+    "LastModified": "2025-12-14T13:43:38.000Z",
+    "ETag": "\"b29a3dced2ecb16ce3ba920ad27e7844-1\"",
+    "ChecksumAlgorithm": "CRC64NVME",
+    "ChecksumType": "FULL_OBJECT",
+    "Size": "68163",
+    "StorageClass": "STANDARD",
+    "ImageUrl": "https://andierni-images-112622707427.s3.eu-central-1.amazonaws.com/fc4a0b58-6a02-4188-9a4b-13a08946096c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOSFODNN7EXAMPLE%2F20251214%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20251214T140000Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=example0987654321fedcba"
+  }
+]
+

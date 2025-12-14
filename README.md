@@ -1,6 +1,6 @@
 # 📸 Image Gallery - Beautiful AI images Collection
 
-- **This gallery displays all the AI images created at [image.andierni.ch](image.andierni.ch)**
+- **This gallery displays all the AI images created at [image.andierni.ch](image.andierni.ch) and is served at [imagegallery.andierni.ch](imagegallery.andierni.ch)**
 
 ## ✨ Features
 
